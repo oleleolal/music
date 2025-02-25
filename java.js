@@ -260,7 +260,7 @@ window.addEventListener('load', () => {
 	playingSong();
 });
 
-menulistBtn.addEventListener('click', () => musicList.classList.add('show'));
+menulistBtn.addEventListener('click', () => musicList.classList.toggle('show'));
 closeMusicBtn.addEventListener('click', () =>
 	musicList.classList.remove('show')
 );
