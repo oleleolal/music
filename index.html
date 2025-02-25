@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />"
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
-     integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <link rel="stylesheet" href="./index.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+    integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="./index.css">
 </head>
+
 <body>
-    <div class="khung">
-        <div class="khungphat">
-                <header class="khungtren">
-                    <button class="btntren"><i class="fa-solid fa-arrow-left"></i></button>
-                    <h3>Songs</h3>
-                    <button class="btntren"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                        <path fill="currentColor"
-                        d="M15 6H3v2h12zm0 4H3v2h12zM3 16h8v-2H3zM17 6v8.18c-.31-.11-.65-.18-1-.18a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3V8h3V6z" />
-                    </svg></button>
-                </header>
-                <div class="than baihat">
-                    <div class="anh">
-                        <img class="xoay" src="https://i.pinimg.com/236x/5e/43/43/5e4343c2edc17c5ae06ce6aa72ca0340.jpg">
-                    </div>
-                
-                    <div class="chitiet">
-                        <h1 class="ten">Nơi tình yêu bắt đầu</h1>
-                        <h3 class="nghesi">Bằng Kiều và Lam Anh
-                        </h3>
-                    </div>
-                    <div class="dieukhien">
-                        <button class="btn-control btn-prev">
-                            <i class="fa-solid fa-backward"></i>
-                        </button>
-                        <button class="btn-control play-pause">
-                            <i class="fa-solid fa-play"></i>
-                        </button>
-                        <button class="btn-control btn-next">
-                            <i class="fa-solid fa-forward"></i>
-                        </button>
-                    </div>
-                </div>
+  <div class="wrapper">
+    <div class="wrapper-play">
+
+      <header class="song-header">
+        <button class="btn-head"><i class="fa-solid fa-arrow-left"></i></button>
+        <h3>Songs</h3>
+        <button id="menu-list" class="btn-head"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="M15 6H3v2h12zm0 4H3v2h12zM3 16h8v-2H3zM17 6v8.18c-.31-.11-.65-.18-1-.18a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3V8h3V6z" />
+          </svg></button>
+      </header>
+
+      <div class="player body-song">
+        <div class="image-area">
+          <img class=""
+            src="./img/noitinhyeustart.jpg" alt="">
         </div>
+
+        <div class="song-details">
+          <h1 class="name">Nơi tình yêu bắt đầu</h1>
+          <h3 class="artists">Bằng Kiều và Lam Anh</h3>
+        </div>
+
+        <div class="audio-c">
+          <div class="progress-area">
+            <div class="progress-bar">
+              <audio src="" type="audio/mp3" id="m-audio"></audio>
+            </div>
+          </div>
+
+          <div class="song-timer">
+            <div class="current-time">0:00</div>
+            <div class="max-duration">0:00</div>
+          </div>
+        </div>
+
+
+        <div class="controls">
+          <button class="btn-control btn-prev">
+            <i class="fa-solid fa-backward"></i>
+          </button>
+          <button class="btn-control play-pause">
+            <i class="fa-solid fa-play"></i>
+          </button>
+          <button class="btn-control btn-next">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="music-list">
+        <div class="header">
+          <span>Playing now</span>
+          <i class="fa-solid fa-xmark" id="close"></i>
+        </div>
+
+        <ul>
+        </ul>
+      </div>
     </div>
+  </div>
+  </div>
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="./java.js"></script>
+
 </html>
